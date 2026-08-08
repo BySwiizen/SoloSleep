@@ -1,0 +1,7 @@
+root = true
+
+[*.java]
+charset = UTF-8
+end_of_line = LF
+indent_style = TAB
+indent_size = 4

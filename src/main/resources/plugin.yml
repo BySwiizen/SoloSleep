@@ -1,0 +1,11 @@
+name: ${name}
+main: ${groupid}.${artifactid}
+description: ${description}
+author: ${author}
+
+version: ${version}
+api-version: ${apiversion}
+
+
+load: POSTWORLD
+folia-supported: true

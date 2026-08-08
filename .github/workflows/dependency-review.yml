@@ -1,0 +1,26 @@
+name: Dependency Review
+
+
+on:
+  pull_request:
+  workflow_dispatch: 
+  
+  
+jobs: 
+  dependency-review:
+    
+    runs-on: ubuntu-24.04
+    
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+      
+    steps:
+      # https://github.com/actions/checkout
+      - name: Checkout Git repository
+        uses: actions/checkout@v7.0.1
+        
+      # https://github.com/actions/dependency-review-action
+      - name: Dependency Review
+        uses: actions/dependency-review-action@v5.0.0
