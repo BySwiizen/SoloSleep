@@ -40,7 +40,7 @@ public class SoloSleep extends JavaPlugin {
 	}
 	
 	private void registerMetrics() {
-		new Metrics(this, 11111);
+		new Metrics(this, 34949);
 	}
 	
 	private void registerListener() {
