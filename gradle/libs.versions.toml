@@ -2,7 +2,7 @@
 shadow = "9.6.1"
 gradleideaext = "1.4.1"
 annotations = "26.1.0"
-gson = "2.14.0"
+gson = "2.15.0"
 commonslang3 = "3.21.0"
 spigot = "26.3-R0.1-SNAPSHOT"
 folia = "0.5.2"
