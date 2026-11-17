@@ -39,8 +39,13 @@ dependencies {
     compileOnly(libs.spigot)
     // https://github.com/TechnicallyCoded/FoliaLib
     implementation(libs.folia)
+    // https://github.com/dejvokep/boosted-yaml
+    implementation(libs.boostedyaml)
     // https://github.com/KyoriPowered/adventure
     implementation(libs.adventureapi)
+    // https://github.com/Revxrsal/Lamp
+    implementation(libs.lampcommon)
+    implementation(libs.lampbukkit)
     // https://github.com/Bastian/bstats-metrics
     implementation(libs.bstats)
 }
@@ -57,6 +62,7 @@ tasks {
         relocate("com.google.gson", "fr.byswiizen.solosleep.libs.gson")
         relocate("org.apache.commons", "fr.byswiizen.solosleep.libs.commonslang3")
         relocate("com.tcoded.folialib", "fr.byswiizen.solosleep.libs.folialib")
+        relocate("dev.dejvokep.boostedyaml", "fr.byswiizen.solosleep.libs.boostedyaml")
         relocate("org.bstats", "fr.byswiizen.solosleep.libs.metrics")
         archiveFileName.set("${project.name}-${project.version}.jar")
     }

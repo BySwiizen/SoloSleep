@@ -17,14 +17,18 @@ public class BedListener implements Listener {
 	
 	@EventHandler
 	public void onBed(PlayerBedEnterEvent event) {
-		plugin.getFoliaLib().getScheduler().runAtEntityLater(event.getPlayer(), () -> {
-			if (event.getPlayer().isSleeping()) {
-				plugin.getFoliaLib().getScheduler().runNextTick((_ -> {
-					event.getPlayer().getWorld().setTime(0L);
-					event.getPlayer().getWorld().setStorm(false);
-					event.getPlayer().getWorld().setThundering(false);
-				}));
-			}
-		}, 5L, TimeUnit.SECONDS);
+		if (!SoloSleep.configfile.getBoolean("disable-solosleep")) {
+			plugin.getFoliaLib().getScheduler().runAtEntityLater(event.getPlayer(), () -> {
+				if (event.getPlayer().isSleeping()) {
+					plugin.getFoliaLib().getScheduler().runNextTick((_ -> {
+						event.getPlayer().getWorld().setTime(0L);
+						event.getPlayer().getWorld().setStorm(false);
+						event.getPlayer().getWorld().setThundering(false);
+					}));
+				}
+			}, 5L, TimeUnit.SECONDS);
+		} else {
+			return;
+		}
 	}
 }

@@ -9,3 +9,13 @@ api-version: ${apiversion}
 
 load: POSTWORLD
 folia-supported: true
+
+
+commands: 
+  solosleep:
+    description: Main command of SoloSleep
+    usage: /<command> [help|reload]
+permissions:
+    solosleep.reload:
+      description: Reload permission of SoloSleep
+      default: op

@@ -1,0 +1,5 @@
+prefix: '&6SoloSleep &7»'
+reload-success: '&aThe configuration files have been reloaded.'
+help:
+  - '&e/solosleep reload &0- &fReloads the plugin configuration files.'
+  - '&e/solosleep help &0- &fDisplays the help command.'
